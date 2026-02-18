@@ -1,0 +1,22 @@
+/* Efeito de Scroll Suave no Mockup */
+.mini-site-content {
+    transition: transform 10s ease-in-out; /* O site leva 10s para percorrer tudo */
+    will-change: transform;
+}
+
+/* Quando o mouse entra no card, o conteúdo sobe */
+.group:hover .mini-site-content {
+    transform: translateY(-65%); /* Faz o site interno "rolar" */
+}
+
+/* Animação do balão "Passe o mouse" */
+@keyframes bounce-custom {
+    0%, 100% { transform: translateY(0) translateX(-50%); }
+    50% { transform: translateY(-10px) translateX(-50%); }
+}
+
+.animate-bounce-custom {
+    position: absolute;
+    left: 50%;
+    animation: bounce-custom 2s infinite;
+}
