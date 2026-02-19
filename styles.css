@@ -4,6 +4,20 @@
     will-change: transform;
 }
 
+.no-copy {
+    /* Impede a seleção do texto */
+    user-select: none; 
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+ */
+    
+    /* Muda o cursor para a setinha padrão, mesmo sobre o texto */
+    cursor: default;
+    
+    /* Opcional: impede que imagens sejam arrastadas */
+    -webkit-user-drag: none;
+}
+
 /* Quando o mouse entra no card, o conteúdo sobe */
 .group:hover .mini-site-content {
     transform: translateY(-65%); /* Faz o site interno "rolar" */
